@@ -10,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OrderBy;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -35,6 +34,8 @@ public class Journal {
 	@NotEmpty(message="Text is required!")
     @Size(min=3, max=152, message="Text must be between 3 and 152 characters")
     private String text;
+	
+	private String dayPosted;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="plant_id")
@@ -107,6 +108,15 @@ public class Journal {
 		return updatedAt;
 	}
 
+	public String getDayPosted() {
+		return dayPosted;
+	}
+
+	public void setDayPosted(String dayPosted) {
+		this.dayPosted = dayPosted;
+	}
+
+
 
 	@PrePersist
     protected void onCreate(){
@@ -116,5 +126,6 @@ public class Journal {
     protected void onUpdate(){
         this.updatedAt = new Date();
     }
+
 	
 }

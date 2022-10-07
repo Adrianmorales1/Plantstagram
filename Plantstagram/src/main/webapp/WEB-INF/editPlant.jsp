@@ -42,20 +42,36 @@
 				</div>
 			</div>
 
-			<div class = " row mb-3">
+			<div class = "row mb-3">
+				<div class = "col-md-6 p-2">
+					<form:input path = "nameOfPlant" class = "form-control" placeholder = "Enter Name of Plant"/>
+				</div>
+				<div class = "col-md-6 p-2">
+					<form:input path = "nicknameOfPlant" class = "form-control" placeholder = "Enter Nickname of Plant"/>
+				</div>
+				<div class = "col-md-12">
+					<form:textarea path = "description" class = "form-control" placeholder = "Enter Description"/>
+				</div>
 				
-				<form:input path = "nameOfPlant" class = "form-control col-lg-6" placeholder = "Enter Name of Plant"/>
-				<form:input path = "nicknameOfPlant" class = "form-control"  placeholder = "Enter Nickname of Plant"/>
-				<form:textarea path = "description" class = "form-control" placeholder = "Enter Description"/>
-				<div>
-					<form:input path = "numberDate" type = "number"/>
-					<form:select path = "nameDate">
-						<option value = "Week">Week</option>
-						<option value = "Month">Month</option>
-					</form:select>
+				<div class = "row justify-content-center align-items-center mt-2">
+					<div class = "col-md-12">
+						<form:label path = "numberDate">How many times do you water the Plant?</form:label>
+					</div>
+					<div class = "col-md-2 col-sm-3 col-3">
+						<form:input path = "numberDate" class = " col-xl-6 form-control" type = "number"/>
+					</div>
+					<div class = "col-md-1 col-sm-1 col-2">
+						<form:label path = "nameDate">days a </form:label>
+					</div>
+					<div class = "col-md-2 col-sm-4 col-4">
+						<form:select path = "nameDate" class = " col-xl-6 form-control">
+								<option value = "Week">Week</option>
+								<option value = "Month">Month</option>
+							</form:select>
+					</div>
 				</div>
 			</div>
-			<input type="submit" value = "Submit">
+			<input type="submit" class = "btn btn-outline-primary text-center" value = "Submit">
 		</form:form>
 	</div>
 </body>

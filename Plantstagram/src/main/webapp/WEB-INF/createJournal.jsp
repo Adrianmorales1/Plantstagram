@@ -38,9 +38,15 @@
 				</div>
 			</div>
 
-			<div class = "mb-3">
-				<form:input path = "title" class = "form-control" placeholder = "Enter Title of Journal"/>
-				<form:textarea path = "text" class = "form-control" placeholder = "Enter Journal Post"/>
+			<div class = "row mb-3">
+				<div class = "row-col-5">
+					<form:input path = "title" class = "form-control" placeholder = "Enter Title of Journal"/>
+				</div>
+				
+				<div class = "row-col-5">
+					<form:textarea path = "text" class = "form-control" placeholder = "Enter Journal Post"/>
+				</div>
+				
 			</div>
 			<input type="submit" value = "Submit">
 		</form:form>

@@ -43,8 +43,8 @@
 			<div class = "col-xl-4 col-lg-4 col-12">
 				<h2>Watering Schedule:</h2>
 				<h3><c:out value = "${plant.numberDate}"></c:out> times per <c:out value = "${plant.nameDate}"></c:out></h3>
-				<a href = "/journal/create/${plant.id}" class = "btn btn-outline-primary">Post a Journal!</a>
 				<c:if test = "${plant.user.id == userId}">
+					<a href = "/journal/create/${plant.id}" class = "btn btn-outline-primary">Post a Journal!</a>
 					<div class = "row justify-content-around mt-2">
 						<a href = "/plant/edit/${plant.id}" class = "btn btn-outline-success col-4">Edit Plant!</a>
 						<a href = "/plant/delete/${plant.id}" class = "btn btn-outline-danger col-4">Delete Plant!</a>
@@ -67,7 +67,7 @@
 			<div class="card text-center col-xl-2 col-lg-3  col-md-4 col-sm-6">
 			  <div class="card-body">
 			  	<h4 class="card-text"><c:out value = "${journal.title}"></c:out></h4>
-			    <h5 class="card-title text-muted"><c:out value = "${journal.createdAt}"></c:out></h5>
+			    <h5 class="card-title text-muted"><c:out value = "${journal.dayPosted}"></c:out></h5>
 			    <a href="/journal/${journal.id}" class="btn btn-primary">Show Journal</a>
 			    <c:if test = "${plant.user.id == userId}">
 			    	<a href="/journal/delete/${journal.id}" class="btn btn-outline-danger">Delete Journal</a>

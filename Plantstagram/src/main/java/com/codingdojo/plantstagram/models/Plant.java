@@ -47,6 +47,9 @@ public class Plant {
 	private String description;
 	
 	
+	//check it out
+	private String boxArt;
+	
 	@NotNull(message="Number is required!")
 	@Min(value = 0, message = "Number must be greater than 0")
 	@Max(value = 31, message = "Number must be less than 31")

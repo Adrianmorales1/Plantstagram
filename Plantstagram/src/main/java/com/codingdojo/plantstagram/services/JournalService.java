@@ -1,5 +1,6 @@
 package com.codingdojo.plantstagram.services;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,5 +43,12 @@ public class JournalService {
 	
 	public List<Journal> getAll() {
 		return journalRepo.findAll();
+	}
+	
+	public String getTheDate() {
+		Date t = new Date();
+		String temp = t.toString();
+		String dateOnly = temp.substring(0,10);
+		return dateOnly;
 	}
 }

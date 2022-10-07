@@ -54,6 +54,8 @@ public class JournalController {
 		}
 		Plant underPlant = plantServ.getPlantById(id);
 		journal.setPlant(underPlant);
+		String dayPosted = journalServ.getTheDate();
+		journal.setDayPosted(dayPosted);
 		journalServ.createJournal(journal);
 		return "redirect:/plant/" + id;
 	}

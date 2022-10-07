@@ -51,7 +51,14 @@
 				</div>
 			</c:forEach>
 			</div>
+			
+			<c:if test = "${user.plants.size() == 0 }">
+			 	<div class = "row justify-content-center">
+			 		<h3 class = "col text-muted mt-3">No Plants Created</h3>
+			 	</div>
+			 </c:if>
 		</div>
+		
 		
 </body>
 </html>
